@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Messenger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .chat-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 400px;
+            max-width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-box {
+            border: 1px solid #ddd;
+            height: 300px;
+            padding: 10px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-box .message {
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 15px;
+            width: fit-content;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+        .chat-box .message.user1 {
+            background-color: #20a7db;
+            color: #fff;
+            align-self: flex-start;
+            border-bottom-left-radius: 0;
+        }
+        .chat-box .message.user2 {
+            background-color: 	#28E326;
+            color: #fff;
+            align-self: flex-end;
+            border-bottom-right-radius: 0;
+        }
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .input-container input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-right: 10px;
+        }
+        .input-container button {
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .input-container button:hover {
+            opacity: 0.9;
+        }
+        /* User 1 button color */
+        .input-container button.user1-btn {
+            background-color: #20a7db;
+        }
+        .input-container button.user1-btn:hover {
+            background-color: 	#62c1e5;
+        }
+        /* User 2 button color */
+        .input-container button.user2-btn {
+            background-color: 	#13D00C;
+        }
+        .input-container button.user2-btn:hover {
+            background-color: 	#00ff00;
+        }
+        .refresh-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .refresh-button button {
+            background-color: #be29ec;
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .refresh-button button:hover {
+            background-color: #E03FD8;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h2 style="text-align: center;">Chat Messenger</h2>
+        <div id="chat-box" class="chat-box">
+            <!-- Messages will appear here -->
+        </div>
+
+        <!-- User 1 message input and send button -->
+        <div class="input-container">
+            <input type="text" id="user1-message" placeholder="User 1 message">
+            <button class="user1-btn" onclick="sendMessage('user1')">Chat as User 1</button>
+        </div>
+
+        <!-- User 2 message input and send button -->
+        <div class="input-container">
+            <input type="text" id="user2-message" placeholder="User 2 message">
+            <button class="user2-btn" onclick="sendMessage('user2')">Chat as User 2</button>
+        </div>
+
+        <!-- Single refresh button -->
+        <div class="refresh-button">
+            <button onclick="refreshMessages()">Refresh Chat</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to send a message
+        function sendMessage(user) {
+            const messageInput = document.getElementById(user + '-message');
+            const messageText = messageInput.value.trim();
+
+            if (messageText !== '') {
+                const chatBox = document.getElementById('chat-box');
+                
+                // Create a new div element to hold the message
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message', user);
+                messageDiv.textContent = messageText;
+
+                // Append the new message to the chat box
+                chatBox.appendChild(messageDiv);
+
+                // Scroll to the bottom of the chat box
+                chatBox.scrollTop = chatBox.scrollHeight;
+
+                // Clear the message input field
+                messageInput.value = '';
+            }
+        }
+
+        // Function to simulate refreshing the chat (clear messages)
+        function refreshMessages() {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.innerHTML = ''; // Clears all messages
+        }
+
+        // Detect "Enter" key press in the input box for User 1 and User 2
+        document.getElementById('user1-message').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage('user1');
+            }
+        });
+        document.getElementById('user2-message').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage('user2');
+            }
+        });
+    </script>
+</body>
+</html>
