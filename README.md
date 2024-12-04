@@ -4,7 +4,7 @@ Live URL:    https://aminbiography.github.io/chat-messenger/
 
 
 ----------------------------------------------------------------------------
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -285,7 +285,7 @@ After setting up Firebase and updating the configuration in your code, save the 
 You should now be able to send messages as User 1 and User 2. Messages will appear in the chat box in real-time.
 Check the Firebase Console to see the messages stored in your Realtime Database under the messages node.
 This setup will allow you to store and retrieve messages in real-time, providing a functional backend for the chat app.
-
+```
 
 
 
