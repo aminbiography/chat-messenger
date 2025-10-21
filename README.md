@@ -403,7 +403,6 @@ You are free to use, modify, and share it — attribution is appreciated.
 
 # Description of the Code
 
-```
 This code represents a simple Chat Messenger web app built using HTML, CSS, and JavaScript, with Firebase Realtime Database as the backend for storing and retrieving messages. Here's how the code works:
 
 HTML Structure:
@@ -432,10 +431,12 @@ Step 1: Create a Firebase Project
 Go to the Firebase Console.
 Click on Add Project.
 Give your project a name and complete the setup by following the steps in the wizard.
+
 Step 2: Enable Realtime Database
 In your Firebase project dashboard, go to Build -> Realtime Database.
 Click on Create Database.
 Set the database location and security rules (you can start with public rules for testing but make sure to secure them later).
+
 Step 3: Add Firebase SDK to Your Project
 From the Firebase console, click on the Settings icon (⚙️) and go to Project Settings.
 Scroll down to Your apps and choose Web.
@@ -452,6 +453,7 @@ const firebaseConfig = {
     messagingSenderId: "YOUR_SENDER_ID",
     appId: "YOUR_APP_ID"
 };
+
 Step 4: Set Up Firebase Rules (Optional but Recommended)
 For a simple chat app, you may want to allow read and write access for authenticated users or for testing purposes. You can set your rules to public during development:
 
@@ -467,12 +469,14 @@ Copy code
   }
 }
 For production, consider using authenticated access to secure your database.
+
 Step 5: Deploy and Test
 After setting up Firebase and updating the configuration in your code, save the HTML file and open it in a browser.
 You should now be able to send messages as User 1 and User 2. Messages will appear in the chat box in real-time.
 Check the Firebase Console to see the messages stored in your Realtime Database under the messages node.
 This setup will allow you to store and retrieve messages in real-time, providing a functional backend for the chat app.
-```
+
+---
 
 
 
