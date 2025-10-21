@@ -398,13 +398,12 @@ You are free to use, modify, and share it — attribution is appreciated.
     </script>
 </body>
 </html>
+```
 
 
+# Description of the Code
 
-
-
-
-Description of the Code
+```
 This code represents a simple Chat Messenger web app built using HTML, CSS, and JavaScript, with Firebase Realtime Database as the backend for storing and retrieving messages. Here's how the code works:
 
 HTML Structure:
