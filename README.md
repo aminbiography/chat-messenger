@@ -172,26 +172,10 @@ Developers can improve this project by adding:
 }
 ```
 
----
-
-## Author
-
-**Developed by [Mohammad Aminul Islam (Amein)](https://github.com/aminbiography)**
-*Web Developer | Cyber Threat Intelligence Associate*
-
----
-
-## License
-
-This project is licensed under the **MIT License**.
-You are free to use, modify, and share it — attribution is appreciated.
-
----
-
-
-
-
 ----------------------------------------------------------------------------
+
+Codes:
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -478,7 +462,18 @@ This setup will allow you to store and retrieve messages in real-time, providing
 
 ---
 
+## Author
 
+**Developed by [Mohammad Aminul Islam (Amein)](https://github.com/aminbiography)**
+*Web Developer | Cyber Threat Intelligence Associate*
 
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+You are free to use, modify, and share it — attribution is appreciated.
+
+---
 
 
