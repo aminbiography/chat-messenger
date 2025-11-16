@@ -2,7 +2,7 @@ Live URL:    https://aminbiography.github.io/chat-messenger/
 
 -------------------------------------------------------------------------------
  
-# Chat Messenger
+# Chat Messenger 
 
 A **real-time web-based chat application** built with **HTML, CSS, and JavaScript**, using **Firebase Realtime Database** as the backend.
 This simple but functional app demonstrates **two-user chat simulation**, **real-time message updates**, and **database syncing** — ideal for beginners learning Firebase or developers exploring front-end chat logic.
